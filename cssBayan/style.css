@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-h1 {
+.title {
   width: 60%;
   font-size: 4vh;
   font-weight: 900;
@@ -15,16 +15,16 @@ h1 {
   padding-bottom: 0.5rem;
 }
 
-#accordion-container {
-  border: solid yellowgreen 1px;
+.accordion-container {
+  border: solid yellowgreen 1.5px;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  color: #0066CC;
 }
 
-#accordion-container input {
-  /* display: none; */
-  /* appearance: none; */
+.section-container>input {
+  appearance: none;
 }
 
 .section-container {
@@ -33,17 +33,13 @@ h1 {
   padding-top: 0.5rem;
 }
 
-.section-container:hover img {
-  display: block;
-  background-color: rgb(155, 147, 78);
-}
-
 .section-label {
+  border: solid red 1px;
   font-size: 2.5vh;
   font-weight: 800;
 }
 
-img {
+.section-container img {
   width: 50%;
   height: 37vh;
   margin-left: auto;
@@ -52,6 +48,20 @@ img {
   display: none;
 }
 
-input:checked ~ .img-container>img{
+.accordion-container:hover  {
+  cursor: pointer;
+  color: black;
+}
+
+.section-container:hover img {
   display: block;
+  background-color: rgb(155, 147, 78);
+}
+
+.section-container>input:checked ~ .img-container>img {
+  display: block;
+}
+
+.section-container>input:checked ~ label {
+  color: black;
 }
