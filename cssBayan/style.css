@@ -24,6 +24,7 @@ h1 {
 
 #accordion-container input {
   /* display: none; */
+  /* appearance: none; */
 }
 
 .section-container {
@@ -51,6 +52,6 @@ img {
   display: none;
 }
 
-input[checked] ~ .img-container>img{
+input:checked ~ .img-container>img{
   display: block;
 }
