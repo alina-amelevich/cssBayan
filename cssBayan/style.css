@@ -15,30 +15,31 @@ h1 {
   padding-bottom: 0.5rem;
 }
 
-li {
-  border-top: solid rgb(223, 223, 223) 1px;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-li:hover img {
-  display: block;
-  background-color: lemonchiffon;
-}
-
-.section-title {
-  list-style: none;
-  font-size: 2.5vh;
-  font-weight: 800;
-}
-
-
 #accordion-container {
   border: solid yellowgreen 1px;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  list-style-type: none;
+}
+
+#accordion-container input {
+  /* display: none; */
+}
+
+.section-container {
+  border-top: solid rgb(223, 223, 223) 1px;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.section-container:hover img {
+  display: block;
+  background-color: rgb(155, 147, 78);
+}
+
+.section-label {
+  font-size: 2.5vh;
+  font-weight: 800;
 }
 
 img {
@@ -50,6 +51,6 @@ img {
   display: none;
 }
 
-li:first-child img {
+input[checked] ~ .img-container>img{
   display: block;
 }
