@@ -5,7 +5,7 @@
 }
 
 .title {
-  width: 60%;
+  width: 50%;
   font-size: 4vh;
   font-weight: 900;
   margin-left: auto;
@@ -17,7 +17,7 @@
 
 .accordion-container {
   border: solid yellowgreen 1.5px;
-  width: 60%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   color: #0066CC;
@@ -57,7 +57,6 @@
 
 .meme-img-container > img {
   width: 50%;
-  height: 37vh;
   margin-left: auto;
   margin-right: auto;
   border: solid blue;
@@ -79,7 +78,6 @@
 /* Появление картинки мема при наведении на секцию мема (М б объединить со следующим?) */
 .section-container:hover .meme-img-container > img {
   display: block;
-  background-color: rgb(155, 147, 78);
 }
 
 /* Отображение картинки мема при выборе секции мема */
