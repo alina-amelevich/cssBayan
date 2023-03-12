@@ -60,7 +60,13 @@
   margin-left: auto;
   margin-right: auto;
   border: solid blue;
-  display: none;
+  display: block;
+}
+
+.meme-img-container {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s; /* Плавная анимация открытия/скрытия картинки мема */
 }
 
 /* Изменение курсора и цвета текста при наведении на аккордион */
@@ -75,14 +81,14 @@
   transition: all 0.5s;
 }
 
-/* Появление картинки мема при наведении на секцию мема (М б объединить со следующим?) */
-.section-container:hover .meme-img-container > img {
-  display: block;
+/* Плавное открытие картинки при наведении на секцию мема (М б объединить со следующим?) */
+.section-container:hover .meme-img-container  {
+  max-height: 50vh;
 }
 
 /* Отображение картинки мема при выборе секции мема */
-.section-container > input:checked ~ .section-label > .meme-img-container > img {
-  display: block;
+.section-container > input:checked ~ .section-label > .meme-img-container {
+  max-height: 50vh;
 }
 
 .section-container > input:checked ~ .section-label {
