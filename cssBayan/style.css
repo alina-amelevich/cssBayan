@@ -54,19 +54,20 @@
 }
 
 .meme-img-container > img {
-  width: 50%;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
   /* border: solid blue; */
   display: block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  transition: width 1s;
 }
 
 .meme-img-container {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.5s; /* Плавная анимация открытия/скрытия картинки мема */
+  transition: max-height 1s; /* Плавная анимация открытия/скрытия картинки мема */
 }
 
 /* Изменение курсора и цвета текста при наведении на аккордион */
@@ -82,14 +83,17 @@
   transition: all 0.5s;
 }
 
-/* Плавное открытие картинки при наведении на секцию мема (М б объединить со следующим?) */
-.section-container:hover .meme-img-container  {
-  max-height: 50vh;
+/* Плавное открытие картинки при наведении на секцию мема */
+/* Отображение картинки мема при выборе секции мема */
+.section-container:hover .meme-img-container,
+.section-container > input:checked ~ .section-label > .meme-img-container {
+  max-height: 100vh;
 }
 
-/* Отображение картинки мема при выборе секции мема */
-.section-container > input:checked ~ .section-label > .meme-img-container {
-  max-height: 50vh;
+/* Плавное увеличение картинки при открытии секции */
+.section-container:hover .meme-img-container > img,
+.section-container > input:checked ~ .section-label > .meme-img-container > img {
+  width: 60%;
 }
 
 .section-container > input:checked ~ .section-label {
