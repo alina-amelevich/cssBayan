@@ -23,7 +23,7 @@
   color: #0066CC;
 }
 
-.section-container>input {
+.section-container > input {
   appearance: none;
 }
 
@@ -33,7 +33,7 @@
   padding-top: 0.5rem;
 }
 
-.section-label {
+.section-label > .section-header {
   border: solid red 1px;
   font-size: 2.5vh;
   font-weight: 800;
@@ -44,18 +44,16 @@
   align-items: center;
 }
 
-.section-label>span {
+.section-header > span {
   border: dotted green;
 }
 
 .plus-svg {
   height: 1.5rem;
   width: 1.5rem;
-  display: inline-block;
-  grid-row-end: auto;
 }
 
-.meme-container>img {
+.meme-container > img {
   width: 50%;
   height: 37vh;
   margin-left: auto;
@@ -64,20 +62,20 @@
   display: none;
 }
 
-.accordion-container:hover  {
+.accordion-container:hover .section-label {
   cursor: pointer;
   color: black;
 }
 
-.section-container:hover>.meme-container>img {
+.section-container:hover .meme-container > img {
   display: block;
   background-color: rgb(155, 147, 78);
 }
 
-.section-container>input:checked ~ .meme-container>img {
+.section-container > input:checked ~ .section-label > .meme-container > img {
   display: block;
 }
 
-.section-container>input:checked ~ .section-label {
+.section-container > input:checked ~ .section-label {
   color: black;
 }
