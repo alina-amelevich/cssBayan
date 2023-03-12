@@ -38,7 +38,7 @@
   font-size: 2.5vh;
   font-weight: 800;
   display: grid;
-  grid-template-columns: 27fr 1fr;
+  grid-template-columns: 1fr 1.5rem;
   justify-content: space-between;
   gap: 0;
   align-items: center;
@@ -51,9 +51,8 @@
 .icon-container {
   height: 1.5rem;
   width: 1.5rem;
-}
-.icon-container > img {
-  filter: opacity(0%);
+  background-image: url(icons/plus-outline.svg);
+  opacity: 0;
 }
 
 .meme-img-container > img {
@@ -65,23 +64,25 @@
   display: none;
 }
 
+/* Изменение курсора и цвета текста при наведении на аккордион */
 .accordion-container:hover .section-label {
   cursor: pointer;
   color: black;
 }
 
-.accordion-container:hover .icon-container > img {
-  filter: opacity(100%);
-  transition: filter 0.4s;
-  /* animation: animation-1 duration 1s; */
+/* Плавное появление иконок при наведении на аккордеон */
+.accordion-container:hover .section-label > .section-header > span.icon-container {
+  opacity: 100%;
+  transition: all 0.5s;
 }
 
+/* Появление картинки мема при наведении на секцию мема (М б объединить со следующим?) */
 .section-container:hover .meme-img-container > img {
   display: block;
   background-color: rgb(155, 147, 78);
-  /* transition-duration: 2s; */
 }
 
+/* Отображение картинки мема при выборе секции мема */
 .section-container > input:checked ~ .section-label > .meme-img-container > img {
   display: block;
 }
@@ -89,3 +90,23 @@
 .section-container > input:checked ~ .section-label {
   color: black;
 }
+
+/* Изменение иконки (поворот) при выборе мема или наведени на секцию */
+.section-container > input:checked ~ .section-label .icon-container,
+.section-container:hover .icon-container {
+  transform: rotate(45deg);
+}
+
+/* @keyframes icon-changing {
+  from {
+    background-image: url(icons/plus-outline.svg);
+    opacity: 100%;
+  }
+  40% {
+    opasity: 0%;
+  }
+  to {
+    background-image: url(icons/close-outline.svg);
+    opacity: 100%;
+  }
+} */
