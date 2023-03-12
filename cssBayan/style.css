@@ -37,9 +37,25 @@
   border: solid red 1px;
   font-size: 2.5vh;
   font-weight: 800;
+  display: grid;
+  grid-template-columns: 27fr 1fr;
+  justify-content: space-between;
+  gap: 0;
+  align-items: center;
 }
 
-.section-container img {
+.section-label>span {
+  border: dotted green;
+}
+
+.plus-svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: inline-block;
+  grid-row-end: auto;
+}
+
+.meme-container>img {
   width: 50%;
   height: 37vh;
   margin-left: auto;
@@ -53,15 +69,15 @@
   color: black;
 }
 
-.section-container:hover img {
+.section-container:hover>.meme-container>img {
   display: block;
   background-color: rgb(155, 147, 78);
 }
 
-.section-container>input:checked ~ .img-container>img {
+.section-container>input:checked ~ .meme-container>img {
   display: block;
 }
 
-.section-container>input:checked ~ label {
+.section-container>input:checked ~ .section-label {
   color: black;
 }
