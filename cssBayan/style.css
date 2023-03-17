@@ -70,6 +70,27 @@
   transition: max-height 1s; /* Плавная анимация открытия/скрытия картинки мема */
 }
 
+/* Отображение картинки мема при выборе секции мема */
+.section-container > input:checked ~ .section-label > .meme-img-container {
+  max-height: 150vh;
+}
+
+/* Плавное увеличение картинки при открытии секции */
+.section-container > input:checked ~ .section-label > .meme-img-container > img {
+  width: 60%;
+}
+
+.section-container > input:checked ~ .section-label {
+  color: black;
+}
+
+/* Изменение иконки (поворот) при выборе мема*/
+.section-container > input:checked ~ .section-label .icon-container {
+  transform: rotate(45deg);
+}
+
+@media (hover: hover) {
+
 /* Изменение курсора и цвета текста при наведении на аккордион */
 .accordion-container:hover .section-label,
 .accordion-container:hover {
@@ -83,27 +104,20 @@
   transition: all 0.5s;
 }
 
-/* Плавное открытие картинки при наведении на секцию мема */
-/* Отображение картинки мема при выборе секции мема */
-.section-container:hover .meme-img-container,
-.section-container > input:checked ~ .section-label > .meme-img-container {
+/* Плавное открытие картинки при наведении на секцию */
+.section-container:hover .meme-img-container {
   max-height: 150vh;
 }
 
-/* Плавное увеличение картинки при открытии секции */
-.section-container:hover .meme-img-container > img,
-.section-container > input:checked ~ .section-label > .meme-img-container > img {
+/* Плавное увеличение картинки при наведении на секцию */
+.section-container:hover .meme-img-container > img {
   width: 60%;
 }
 
-.section-container > input:checked ~ .section-label {
-  color: black;
-}
-
-/* Изменение иконки (поворот) при выборе мема или наведени на секцию */
-.section-container > input:checked ~ .section-label .icon-container,
-.section-container:hover .icon-container {
-  transform: rotate(45deg);
+/* Изменение иконки (поворот) при наведени на секцию */
+  .section-container:hover .icon-container {
+    transform: rotate(45deg);
+  }
 }
 
 @media (min-width: 320px) and (max-width: 820px) {
@@ -139,3 +153,4 @@
     font-size: 2.5rem;
   }
 }
+
